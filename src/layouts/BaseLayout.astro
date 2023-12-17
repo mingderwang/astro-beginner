@@ -1,7 +1,16 @@
 ---
-	const { name } = Astro.props;
+import { ViewTransitions } from 'astro:transitions'
+const { name } = Astro.props;
 ---
-<div class="grid place-items-center h-screen content-center">
-  <p>Hello {name}!</p>
-  <slot />
-</div>
+<!doctype html>
+<html lang="en">
+	<head>
+	   	<ViewTransitions />
+	</head>
+	<body>
+	<div class="grid place-items-center h-screen content-center">
+        <p>Hello {name}!</p>
+		<slot />
+	</div>
+	</body>
+</html>
