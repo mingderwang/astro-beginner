@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Button } from "@/components/ui/button"
+import { ModeToggle } from '@/components/ModeToggle';
 ---
 <BaseLayout name="ming">
-  <Button>Click Me</Button>
+<ModeToggle client:load />
   <a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
 </BaseLayout>
 
