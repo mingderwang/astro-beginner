@@ -1,19 +1,11 @@
 ---
 import Button from '../components/do-this-instead.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
+<BaseLayout name="ming">
+  <h1 class="text-3xl font-bold underline">
+    Hello Tailwind + Astro
+  </h1>
+  <Button>Click Me</Button>
+</BaseLayout>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1 class="text-3xl font-bold underline">
-            Hello Tailwind + Astro
-        </h1>
-        <Button>Click Me</Button>
-	</body>
-</html>
