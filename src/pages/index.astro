@@ -1,13 +1,16 @@
 ---
-import Button from '../components/do-this-instead.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Button } from "@/components/ui/button"
+import { ModeToggle } from '@/components/ModeToggle';
+import { CardWithForm } from '@/components/CardWithForm';
+import { SelectDemo } from '@/components/SelectDemo';
+import { TableDemo } from '@/components/TableDemo';
 ---
 <BaseLayout name="ming">
-  <h1 class="text-3xl font-bold underline">
-    Hello Tailwind + Astro
-  </h1>
-  <Button>Click Me</Button>
-    <a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-    <a href="/nextui" class="p-4 underline">NextUI Demo</a>
+<ModeToggle client:load />
+<CardWithForm client:load />
+<SelectDemo client:load/>
+<TableDemo client:load/>
+  <a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
 </BaseLayout>
 
