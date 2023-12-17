@@ -1,0 +1,31 @@
+import React from 'react';
+import {Button} from '@nextui-org/react';
+import confetti from 'canvas-confetti';
+
+const CustomButton = () => {
+  const handleConfetti = () => {
+    confetti({
+      particleCount: 100,
+      startVelocity: 30,
+      spread: 360,
+      origin: {
+        x: Math.random(),
+        // since they fall down, start a bit higher than random
+        y: Math.random() - 0.2
+      }
+    });
+  };
+
+  return (
+    <Button
+      disableRipple
+      className="relative overflow-visible rounded-full hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
+      size="lg"
+      onPress={handleConfetti}
+    >
+      Click me
+    </Button>
+  );
+};
+
+export default CustomButton;
