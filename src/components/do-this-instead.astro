@@ -8,5 +8,10 @@
   function handleClick () {
     console.log("button clicked!");
   }
-  document.getElementById("button").addEventListener("click", handleClick);
+  if (document.getElementById != null) {
+    const button = document.getElementById("button")
+    if (button != null && button.addEventListener != null) {
+      button.addEventListener("click", handleClick);
+    }
+  }
 </script>
